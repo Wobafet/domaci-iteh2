@@ -5,13 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Passenger extends Model
+class Schedule extends Model
 {
     use HasFactory;
 
-    public $table = 'passenger';
-   
-    public function schedule (){
-        return $this->belongsTo('App\Model\Schedule');
+    public $table = 'schedule';
+
+    public function passengers(){
+
+        return $this->hasMany('App\Models\Passenger');
     }
+
+
 }
