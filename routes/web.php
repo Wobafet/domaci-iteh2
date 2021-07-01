@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+// use App\Http\Controllers\PassengerController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,14 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
 
-Route::get('/passenger', function () {
-    return view('passenger');
-});
-
-Route::get('/schedule', function () {
-    return view('/schedule');
-});
+Route::get('/passenger','PassengerController@index');
+Route::get('/','WelcomeController@index');
+Route::get('/schedule','ScheduleController@index');
