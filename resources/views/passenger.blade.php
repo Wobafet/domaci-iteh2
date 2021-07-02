@@ -25,16 +25,16 @@
     <tbody>
     <tr>
     
-    @foreach($passengers as $passenger)
-     <tr>
-    <td>{{$passenger->firstName}}</td>
-    <td>{{$passenger->lastName}}</td>
-    <td>{{$passenger->phoneNumber}}</td>
+   @foreach($passengers as $passenger)
+ <tr>
+<td>{{$passenger->firstName}}</td>
+<td>{{$passenger->lastName}}</td>
+<td>{{$passenger->phoneNumber}}</td>
 
-     </tr>
-    @endforeach
-    </tr>
+ </tr>
+@endforeach
 
+</tr>
     </tbody>
     
     </tr>

@@ -19,3 +19,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/passenger','PassengerController@index');
 Route::get('/','WelcomeController@index');
 Route::get('/schedule','ScheduleController@index');
+Route::get('/schedule/trip','ScheduleController@getForm');
+Route::delete('/schedules/delete/{schedule_id}','ScheduleController@delete');
+Route::post('/trip/post','PassengerController@addPassenger');

@@ -16,5 +16,7 @@ class Schedule extends Model
         return $this->hasMany('App\Models\Passenger');
     }
 
+    
+
 
 }

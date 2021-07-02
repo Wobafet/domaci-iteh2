@@ -17,4 +17,22 @@ class PassengerController extends Controller
 
         return view ('passenger');
     }
+
+
+    public function addPassenger(Request $request){
+        
+        $firstName =  $request->firstName;
+        $lastName =  $request->lastName;
+        $phoneNumber =  "" . $request->phoneNumber;
+        $schedule_id = $request->schedule_id;
+       
+            DB::table('passenger')->insert([
+                'firstName' => $firstName,
+                'lastName' => $lastName,
+                'phoneNumber' => $phoneNumber,
+                'schedule_id' => $schedule_id
+            ]);
+
+        return view('index');
+    }
 }
